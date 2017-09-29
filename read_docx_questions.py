@@ -1,3 +1,5 @@
+import sys
+
 from docx import Document
 
 instance_record = {}
@@ -91,7 +93,7 @@ def get_option(doc_iter):
     return option
 
 if __name__ == '__main__':
-    file_name = "testdoc.docx"
+    file_name = sys.argv[1]
     doc  = Document(file_name)
     sub_list = []
     sub_list.append(Subject(doc.paragraphs[0].text))
@@ -119,7 +121,6 @@ if __name__ == '__main__':
             current_option = None
         except StopIteration:
             break
-    import pdb; pdb.set_trace()
     # Print all the questions and options
     print current_subject_obj.name
     print "--------------------------"
