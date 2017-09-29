@@ -131,5 +131,3 @@ if __name__ == '__main__':
             print question.question
             print '\n'
             print question.options
-    x = 10
-
